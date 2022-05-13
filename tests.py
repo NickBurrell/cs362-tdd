@@ -43,6 +43,10 @@ class Main(unittest.TestCase):
     def test_contains_symbol_3(self):
         self.assertFalse(check_pwd("AAAAAAA-"))
 
+    def test_contains_other(self):
+        self.assertFalse(check_pwd("1-aBcDeF,"))
+
+
 
 
 if __name__ == "__main__":

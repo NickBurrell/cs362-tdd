@@ -8,13 +8,14 @@ def check_pwd(pwd):
     for c in pwd:
         if c.isupper():
             has_upper = True
-        if c.islower():
+        elif c.islower():
             has_lower = True
-        if c.isdigit():
+        elif c.isdigit():
             has_digit = True
-        if c in "~`!@#$%^&*()_+-=":
+        elif c in "~`!@#$%^&*()_+-=":
             has_symbol = True
-
+        else:
+            return False
 
     return has_upper and has_lower and has_digit and has_symbol
 
