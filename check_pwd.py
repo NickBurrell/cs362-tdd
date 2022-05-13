@@ -1,6 +1,7 @@
 def check_pwd(pwd):
     has_upper = False
     has_lower = False
+    has_digit = False
     if(len(pwd) < 8 or len(pwd) > 20):
         return False
     for c in pwd:
@@ -8,7 +9,8 @@ def check_pwd(pwd):
             has_upper = True
         if c.islower():
             has_lower = True
+        if c.isdigit():
+            has_digit = True
 
-
-    return has_upper and has_lower
+    return has_upper and has_lower and has_digit
 
